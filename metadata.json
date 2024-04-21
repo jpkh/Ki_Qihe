@@ -1,0 +1,38 @@
+{
+    "$schema": "https://go.kicad.org/pcm/schemas/v1",
+    "name": "KI-Qihe",
+    "description": "QIHE PnP Coords generator ",
+    "description_full": "This plugin generates coordinate files from your PCB that can be used directly with QIHE tabletop PnP machines.",
+    "identifier": "com.github.jpkh.ki-qihe",
+    "type": "plugin",
+    "author": {
+        "name": "Jani Hirvinen",
+        "contact": {
+            "email": "jpsecond@gmail.com"
+        }
+    },
+    "license": "GPL-3.0",
+    "resources": {
+        "Github": "https://github.com/jpkh/ki_qihe",
+        "Readme": "https://github.com/jpkh/ki_qihe/blob/master/README.md"
+    },
+    "tags": [
+        "pcbnew",
+        "qihe",
+        "smd"
+    ],
+    "versions": [
+        {
+            "version": "1.0",
+            "status": "stable",
+            "kicad_version": "7.0",
+            "kicad_version_max": "8.0",
+            "download_url": "https://github.com/jpkh/ki-qihe/releases/download/ki-qihe_v1.0.zip",
+            "platforms": [
+                "linux",
+                "macos",
+                "windows"
+            ]
+        }
+    ]
+}
