@@ -27,7 +27,7 @@
             "status": "stable",
             "kicad_version": "7.0",
             "kicad_version_max": "8.0",
-            "download_url": "https://github.com/jpkh/ki-qihe/releases/download/ki-qihe_v1.0.zip",
+            "download_url": "https://github.com/jpkh/ki_qihe/files/15052549/ki-qihe-v1.0-20240407.zip",
             "platforms": [
                 "linux",
                 "macos",
