@@ -42,7 +42,7 @@ cp metadata.json build
 cp qihe/* build/plugins
 
 # Copy icon to build directory
-cp -r qihe/icon*.png build/resources/icon.png
+cp -r qihe/icon*.png build/resources/
 
 # Change to build directory and create zip package of the plugin
 cd build && zip -r ../ki-qihe-v${def_version}-${def_date}.zip *
