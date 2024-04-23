@@ -80,11 +80,13 @@ class QiHeProcess(Thread):
 
     # Generate the QIHE files
     def generate_qihe_files(self):
-        board_base_name = os.path.splitext(os.path.basename(pcbnew.GetBoard().GetFileName()))[0]
+        board_file_path = pcbnew.GetBoard().GetFileName()
+        board_base_name = os.path.splitext(os.path.basename(board_file_path))[0]
+        board_dir = os.path.dirname(board_file_path)
         top_fileext = self.options.get("top_fileext", def_top_fileext)
         bottom_fileext = self.options.get("bottom_fileext", def_bottom_fileext)
-        output_file_top = f"{board_base_name}_{top_fileext}.csv"
-        output_file_bottom = f"{board_base_name}_{bottom_fileext}.csv"
+        output_file_top = os.path.join(board_dir, f"{board_base_name}_{top_fileext}.csv")
+        output_file_bottom = os.path.join(board_dir, f"{board_base_name}_{bottom_fileext}.csv")
         self.log_activity(f"Generating QIHE files:\n - {output_file_top}\n - {output_file_bottom}")
 
         X_Offset = self.options.get("X_Offset", 0)
