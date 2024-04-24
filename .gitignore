@@ -2,4 +2,11 @@ build
 TestPCB
 Testpcb
 ki-qihe.zip
+__pycache__
+component_mapping.txt
+mapping.txt
+save_restore_error.log
+NOTES.txt
+ki-qihe-options.json
+
 
