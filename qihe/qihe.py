@@ -88,8 +88,6 @@ class QiHeProcess(Thread):
         output_file_top = os.path.join(board_dir, f"{board_base_name}_{top_fileext}.csv")
         output_file_bottom = os.path.join(board_dir, f"{board_base_name}_{bottom_fileext}.csv")
         self.log_activity(f"Generating QIHE files:\n ")
-        #self.log_activity(f"- {output_file_top}\n")
-        #self.log_activity(f"- {output_file_bottom}\n")
 
         X_Offset = self.options.get("X_Offset", 0)
         Y_Offset = self.options.get("Y_Offset", 0)
@@ -157,8 +155,6 @@ class QiHeProcess(Thread):
         if self.verbosity_level >= 3:
             self.log_activity(f"Sort key for {mod.GetReference()} is {key}")
         return key
-        # return mod.GetValue().strip().lower()
-        #return mod.GetValue().split()[0]
 
     # Load the component mapping from the file
     def load_component_mapping(self, filename, log_activity):
@@ -287,11 +283,6 @@ class QiHeProcess(Thread):
                 writer.writerow([])
                 writer.writerow([])
 
-                # Check layer processing options
-                process_top_layer = self.options.get('process_top_layer', False)
-                process_bottom_layer = self.options.get('process_bottom_layer', False)
-
-                #if 
                 self.log_activity(f"Successfully written to file: {filename}")
 
         except Exception as e:
